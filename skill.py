@@ -31,17 +31,17 @@ def echo():
         response_text = 'Hi! What is your FirstName?'
         set_state(user_id, 1)
     elif state == 1:
-        set_firstname(user_id,request.json['original_utterance'])
+        set_firstname(user_id,request.json['request']['original_utterance'])
         response_text = 'And what is your LastName?'
         set_state(user_id, 2)
 
     elif state == 2:
-        set_lastname(user_id,request.json['original_utterance'])
+        set_lastname(user_id,request.json['request']['original_utterance'])
         response_text = 'And what is your PhoneNumber?'
         set_state(user_id, 3)
 
     elif state == 3:
-        set_phonenumber(user_id,request.json['original_utterance'])
+        set_phonenumber(user_id,request.json['request']['original_utterance'])
         response_text = 'Thank for your time! Bye!'
         set_state(user_id, 4)
 
