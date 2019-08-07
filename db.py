@@ -23,7 +23,7 @@ def init():
 def get_state(chat_id):
     user = User.get_or_none(chat_id=chat_id)
     if user is None:
-        return None
+        return 0
 
     return user.state
 

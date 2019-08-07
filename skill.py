@@ -4,7 +4,7 @@ from db import set_state, get_state, set_firstname, set_lastname, set_phonenumbe
 
 app = Flask(__name__)
 
-
+set_state(user_id, 1)
 @app.route('/', methods=['POST'])
 def echo():
 #    command = request.json["command"].split()
