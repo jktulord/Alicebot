@@ -52,5 +52,25 @@ def set_phonenumber(chat_id, number):
     user.phonenumber = number
     user.save()
 
+def get_firstname(chat_id):
+    user = User.get_or_none(chat_id=chat_id)
+    if user is None:
+        return 0
+
+    return user.firstname
+
+def get_lastname(chat_id):
+    user = User.get_or_none(chat_id=chat_id)
+    if user is None:
+        return 0
+
+    return user.lastname
+
+def get_phonenumber(chat_id):
+    user = User.get_or_none(chat_id=chat_id)
+    if user is None:
+        return 0
+
+    return user.phonenumber
 
 init()

@@ -1,6 +1,6 @@
 from flask import Flask, request
 import os
-from db import set_state, get_state, set_firstname, set_lastname, set_phonenumber
+from db import set_state, get_state, set_firstname, set_lastname, set_phonenumber, get_firstname, get_lastname, get_phonenumber
 
 app = Flask(__name__)
 
@@ -46,7 +46,10 @@ def echo():
         set_state(user_id, 4)
 
     elif state == 4:
-        response_text = 'bye!bye!'
+        response_text = f'Here is your Data: ' \
+                        f'FirstName {get_firstname(chat_id)}'\
+                        f'LastName  {get_lastname(chat_id)}'\
+                        f'PhoneNumber +{get_phonenumber(chat_id)}'
 
     response = {
         'version': request.json['version'],
