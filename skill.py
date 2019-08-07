@@ -47,9 +47,9 @@ def echo():
 
     elif state == 4:
         response_text = f'Here is your Data: ' \
-                        f'FirstName {get_firstname(chat_id)}'\
-                        f'LastName  {get_lastname(chat_id)}'\
-                        f'PhoneNumber +{get_phonenumber(chat_id)}'
+                        f'FirstName {get_firstname(user_id)}'\
+                        f'LastName  {get_lastname(user_id)}'\
+                        f'PhoneNumber +{get_phonenumber(user_id)}'
 
     response = {
         'version': request.json['version'],
