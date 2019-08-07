@@ -36,7 +36,7 @@ def echo():
         set_state(user_id, 2)
 
     elif state == 2:
-        set_lastname(user_id,request.json['command'])
+        set_lastname(user_id,request.json['"original_utterance"'])
         response_text = 'And what is your PhoneNumber?'
         set_state(user_id, 3)
 
