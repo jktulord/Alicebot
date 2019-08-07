@@ -46,7 +46,7 @@ def echo():
         set_state(user_id, 4)
 
     elif state == 4:
-    response_text = 'bye!bye!'
+        response_text = 'bye!bye!'
 
     response = {
         'version': request.json['version'],
