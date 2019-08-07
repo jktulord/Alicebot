@@ -24,7 +24,7 @@ def echo():
 
 
 
-    user_id = int(request.json['session']['user_id'])
+    user_id = request.json['session']['user_id']
     state = get_state(user_id)
 
     if state == 0:
