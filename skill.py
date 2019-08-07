@@ -46,10 +46,10 @@ def echo():
         set_state(user_id, 4)
 
     elif state == 4:
-        response_text = f'Here is your Data: ' \
-                        f'FirstName {get_firstname(user_id)}'\
-                        f'LastName  {get_lastname(user_id)}'\
-                        f'PhoneNumber +{get_phonenumber(user_id)}'
+        response_text = f'Here is your Data:        ' \
+                        f'FirstName   {get_firstname(user_id)}             '\
+                        f'LastName    {get_lastname(user_id)}              '\
+                        f'PhoneNumber +  {get_phonenumber(user_id)}        '
 
     response = {
         'version': request.json['version'],
