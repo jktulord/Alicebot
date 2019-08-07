@@ -59,4 +59,4 @@ def echo():
     return response
 
 
-app.run(host='0.0.0.0', post=os.getenv('PORT',5000))
+app.run(host='0.0.0.0', port=os.getenv('PORT',5000))
